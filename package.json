@@ -1,7 +1,7 @@
 {
   "name": "@lexington/microblog",
   "type": "module",
-  "version": "0.0.2", // ← bumped version to trigger deploy
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "astro dev",
