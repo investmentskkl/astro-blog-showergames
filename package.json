@@ -23,4 +23,6 @@
     "@tailwindcss/vite": "^4.1.10",
     "tailwindcss": "^4.1.10"
   }
+
+  // push trigger comment: cleanup for live rebuild
 }
