@@ -1,12 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import content from "@astrojs/content"; // ← Add this
 
-// https://astro.build/config
 export default defineConfig({
-   vite: {
+  vite: {
     plugins: [tailwindcss()],
   },
   markdown: {
@@ -20,6 +19,10 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://yourwebsite.com',
-  integrations: [sitemap(), mdx()]
+  site: 'https://showergames.co', // ← Update this too!
+  integrations: [
+    sitemap(),
+    mdx(),
+    content() // ← Add this
+  ]
 });
