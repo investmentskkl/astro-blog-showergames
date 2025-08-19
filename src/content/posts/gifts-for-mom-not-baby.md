@@ -3,7 +3,9 @@ title: "Baby Shower Gifts for Mom (Not Baby)"
 pubDate: 2025-08-19
 description: "Skip the onesies — give mom something she’ll actually use and love. From comfort to pampering, here are our favorite gift ideas for moms at baby showers."
 author: "Shower Games Co"
-image: "/images/gift-ideas-header.jpg"
+image:
+  url: "/images/gift-ideas-header.jpg"
+  alt: "Wrapped gifts for mom at a baby shower"
 tags: ["gift ideas", "moms", "baby shower", "self-care"]
 ---
 
