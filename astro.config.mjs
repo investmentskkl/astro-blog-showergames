@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import content from "@astrojs/content"; // ← Add this
 
 export default defineConfig({
   vite: {
@@ -19,10 +18,9 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://showergames.co', // ← Update this too!
+  site: 'https://showergames.co',
   integrations: [
     sitemap(),
-    mdx(),
-    content() // ← Add this
+    mdx()
   ]
 });
