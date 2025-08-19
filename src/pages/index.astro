@@ -13,45 +13,49 @@ const sortedPosts = allPosts.sort(
 
 <BaseLayout>
   <section>
-    <div class="py-24">
-      <h1
-        class="text-4xl text-balance font-medium font-display text-base-900 max-w-xl"
-      >
+    <div class="py-24 max-w-4xl mx-auto">
+      <h1 class="text-4xl font-medium font-display text-base-900">
         Printable Baby Shower Games
       </h1>
-      <p class="text-base text-muted-foreground mt-4 max-w-xl">
+      <p class="text-base text-muted-foreground mt-4">
         Fun & easy games for every kind of shower. Find co-ed, classic, and large group games you can download and play today.
       </p>
+    </div>
+  </section>
 
-      <div class="flex flex-wrap gap-3 mt-8">
-        {
-          tags.map((tag) => (
-            <a
-              class="hover:text-blue-500 text-xs font-medium text-base-600"
-              href={`/tags/${tag}`}
-            >
-              {tag}
-            </a>
-          ))
-        }
-      </div>
+<!-- TAG NAV SUBMENU -->
+<section class="bg-base-50 py-4 border-y border-base-200 mb-12">
+  <div class="flex flex-wrap justify-center gap-2 max-w-5xl mx-auto px-4">
+    {
+      tags.map((tag) => (
+        <a
+          href={`/tags/${tag}`}
+          class="text-xs font-medium text-muted-foreground border border-base-200 hover:border-blue-500 hover:text-blue-500 px-3 py-1.5 rounded-full transition"
+        >
+          #{tag}
+        </a>
+      ))
+    }
+  </div>
+</section>
 
-      <div class="grid grid-cols-1 mt-4 gap-8 gap-y-24 sm:grid-cols-2">
-        {
-          sortedPosts.map((post) => (
-            <BlogEntries
-              url={"/posts/" + post.slug}
-              alt={post.data.title}
-              tags={post.data.tags}
-              title={post.data.title}
-              author={post.data.author}
-              image={post.data.image.url}
-              description={post.data.description}
-              pubDate={post.data.pubDate.toString().slice(0, 10)}
-            />
-          ))
-        }
-      </div>
+  <!-- BLOG POST GRID -->
+  <section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 gap-y-24 max-w-6xl mx-auto px-4 md:px-0">
+      {
+        sortedPosts.map((post) => (
+          <BlogEntries
+            url={"/posts/" + post.slug}
+            alt={post.data.title}
+            tags={post.data.tags}
+            title={post.data.title}
+            author={post.data.author}
+            image={post.data.image.url}
+            description={post.data.description}
+            pubDate={post.data.pubDate.toString().slice(0, 10)}
+          />
+        ))
+      }
     </div>
   </section>
 
