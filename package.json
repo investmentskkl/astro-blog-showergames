@@ -1,7 +1,7 @@
 {
   "name": "@lexington/microblog",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2", // ← bumped version to trigger deploy
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -23,6 +23,4 @@
     "@tailwindcss/vite": "^4.1.10",
     "tailwindcss": "^4.1.10"
   }
-
-  // push trigger comment: cleanup for live rebuild
 }
